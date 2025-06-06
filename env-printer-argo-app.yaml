@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/prajwal-221/env-printer.git'
     targetRevision: HEAD
-    path: env-printer/overlays/staging
+    path: env-printer/overlays/staging/
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
