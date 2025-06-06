@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-printer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: env-printer
+  template:
+    metadata:
+      labels:
+        app: env-printer
+    spec:
+      containers:
+      - name: env-printer
+        image: prajwalheaptrace/env-printer:latest
+        envFrom:
+        - configMapRef:
+            name: env-printer-config
